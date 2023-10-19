@@ -1,7 +1,7 @@
 const amqp = require('amqplib')
 
 const setUpConnection = async()=>{
-    const connection = await amqp.connect('amqp://guest:guest@127.0.0.1:5672')
+    const connection = await amqp.connect(process.env.RABBITMQ_URL)
     return connection
 }
 

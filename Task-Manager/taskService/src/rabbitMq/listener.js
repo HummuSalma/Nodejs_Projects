@@ -2,7 +2,7 @@ const amqp = require('amqplib')
 const Task = require('../model/taskModel')
 
 const consumer = async()=>{
-    const connection = await amqp.connect('amqp://guest:guest@127.0.0.1:5672')
+    const connection = await amqp.connect(process.env.RABBITMQ_URL)
     const channel = await connection.createChannel()
     const exchange = 'user-events'
     await channel.assertExchange(exchange, 'direct',{durable :false})
