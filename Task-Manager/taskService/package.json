@@ -1,0 +1,25 @@
+{
+  "name": "taskservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqp": "^0.2.7",
+    "amqplib": "^0.10.3",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.2",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
